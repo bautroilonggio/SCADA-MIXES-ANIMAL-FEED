@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{97EB7832-B2F3-4AF0-9DEC-25187C67CA93}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SCADA</RootNamespace>
+    <AssemblyName>SCADA</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1449.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="NetToolKit, Version=2.1.0.444, Culture=neutral, PublicKeyToken=5107b9c608443dcc" />
+    <Reference Include="S7.Net">
+      <HintPath>F:\Phanmem\PLC\C#\S7.Net\S7.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="SKCLNET, Version=4.4.1.0, Culture=neutral, PublicKeyToken=d5770e63406d04a0" />
+    <Reference Include="SymbolFactoryDotNet, Version=2.0.0.221, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="SymbolFactoryNetEngine, Version=2.0.0.221, Culture=neutral, PublicKeyToken=5107b9c608443dcc" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="13_Test IO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="13_Test IO.designer.cs">
+      <DependentUpon>13_Test IO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="1_Đăng nhập.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1_Đăng nhập.designer.cs">
+      <DependentUpon>1_Đăng nhập.cs</DependentUpon>
+    </Compile>
+    <Compile Include="8_Cài đặt thời gian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="8_Cài đặt thời gian.designer.cs">
+      <DependentUpon>8_Cài đặt thời gian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="14_Báo cáo dữ liệu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="14_Báo cáo dữ liệu.designer.cs">
+      <DependentUpon>14_Báo cáo dữ liệu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="15_Sao lưu và khôi phục.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="15_Sao lưu và khôi phục.designer.cs">
+      <DependentUpon>15_Sao lưu và khôi phục.cs</DependentUpon>
+    </Compile>
+    <Compile Include="9_Cân tự động.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="9_Cân tự động.Designer.cs">
+      <DependentUpon>9_Cân tự động.cs</DependentUpon>
+    </Compile>
+    <Compile Include="12_Cài đặt quán tính.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="12_Cài đặt quán tính.designer.cs">
+      <DependentUpon>12_Cài đặt quán tính.cs</DependentUpon>
+    </Compile>
+    <Compile Include="11_Thêm Mẻ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="11_Thêm Mẻ.designer.cs">
+      <DependentUpon>11_Thêm Mẻ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="7_Cài đặt tổng quát.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="7_Cài đặt tổng quát.Designer.cs">
+      <DependentUpon>7_Cài đặt tổng quát.cs</DependentUpon>
+    </Compile>
+    <Compile Include="6_Cài đặt công thức.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="6_Cài đặt công thức.Designer.cs">
+      <DependentUpon>6_Cài đặt công thức.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetCan.cs">
+      <DependentUpon>DataSetCan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetCan.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetCan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="10_DiaChiIP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="10_DiaChiIP.Designer.cs">
+      <DependentUpon>10_DiaChiIP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="2_Đổi mật khẩu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2_Đổi mật khẩu.Designer.cs">
+      <DependentUpon>2_Đổi mật khẩu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="16_In Báo Cáo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="16_In Báo Cáo.Designer.cs">
+      <DependentUpon>16_In Báo Cáo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="5_Khai báo công thức.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="5_Khai báo công thức.Designer.cs">
+      <DependentUpon>5_Khai báo công thức.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4_Cài đặt tên nguyên liệu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="4_Cài đặt tên nguyên liệu.Designer.cs">
+      <DependentUpon>4_Cài đặt tên nguyên liệu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="3_Màn hình chính.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="3_Màn hình chính.Designer.cs">
+      <DependentUpon>3_Màn hình chính.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLC_Command.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="13_Test IO.resx">
+      <DependentUpon>13_Test IO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="1_Đăng nhập.resx">
+      <DependentUpon>1_Đăng nhập.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="8_Cài đặt thời gian.resx">
+      <DependentUpon>8_Cài đặt thời gian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="14_Báo cáo dữ liệu.resx">
+      <DependentUpon>14_Báo cáo dữ liệu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="15_Sao lưu và khôi phục.resx">
+      <DependentUpon>15_Sao lưu và khôi phục.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="9_Cân tự động.resx">
+      <DependentUpon>9_Cân tự động.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="12_Cài đặt quán tính.resx">
+      <DependentUpon>12_Cài đặt quán tính.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="11_Thêm Mẻ.resx">
+      <DependentUpon>11_Thêm Mẻ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="7_Cài đặt tổng quát.resx">
+      <DependentUpon>7_Cài đặt tổng quát.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="6_Cài đặt công thức.resx">
+      <DependentUpon>6_Cài đặt công thức.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="10_DiaChiIP.resx">
+      <DependentUpon>10_DiaChiIP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="2_Đổi mật khẩu.resx">
+      <DependentUpon>2_Đổi mật khẩu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="16_In Báo Cáo.resx">
+      <DependentUpon>16_In Báo Cáo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="5_Khai báo công thức.resx">
+      <DependentUpon>5_Khai báo công thức.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4_Cài đặt tên nguyên liệu.resx">
+      <DependentUpon>4_Cài đặt tên nguyên liệu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="3_Màn hình chính.resx">
+      <DependentUpon>3_Màn hình chính.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report_CongThucMe.rdlc" />
+    <EmbeddedResource Include="Report_CongThucNguyenLieu.rdlc" />
+    <EmbeddedResource Include="Report_NguyenLieu.rdlc" />
+    <EmbeddedResource Include="Report_CongThuc.rdlc" />
+    <EmbeddedResource Include="Report_ChiTiet.rdlc" />
+    <None Include="DataSetCan.xsc">
+      <DependentUpon>DataSetCan.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetCan.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetCan.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetCan.xss">
+      <DependentUpon>DataSetCan.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed.png" />
+    <None Include="Resources\login-icon.png" />
+    <None Include="Resources\hide3.png" />
+    <None Include="Resources\show.png" />
+    <None Include="Resources\background_pass.png" />
+    <None Include="Resources\background_Login.png" />
+    <None Include="Resources\background_login1.jpg" />
+    <None Include="Resources\background_pass1.jpg" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
